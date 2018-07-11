@@ -1,4 +1,4 @@
 module.exports = {
-    env: 'development',
-    clusters: ['https://nightly.capillary.in/arya/api/v1/']
-};
+  env: 'development',
+  clusters: ['https://nightly.capillary.in/arya/api/v1/']
+}

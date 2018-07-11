@@ -20,12 +20,12 @@ const options = {
         name: 'Runs',
         description: 'Runs API'
       },
-            {
+      {
         name: 'Run Details',
         description: 'Run Details API'
       }
     ],
-    schemes: ['http','https'],
+    schemes: ['http', 'https'],
     host: 'localhost:3000',
     basePath: '/api'
   },

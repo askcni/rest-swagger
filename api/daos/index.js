@@ -4,7 +4,7 @@ let memoryDAO = null
 let rmDAO = null
 
 export function getInstance (type) {
-  console.log("instance type is: ", type)
+  console.log('instance type is: ', type)
   if (type === 'memory') {
     if (memoryDAO === null) {
       memoryDAO = new StocksMemoryDAO()

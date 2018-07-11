@@ -29,16 +29,16 @@ const router = express.Router()
  *           $ref: '#/definitions/RunMetas'
  */
 router.get('/', (req, res, next) => {
-  console.log("inside run meta get /", req.query)
+  console.log('inside run meta get /', req.query)
   dao.getRuns(req.query.count ? req.query.count : 10).then(response => {
-    console.log("RESPONSE: ", response);
+    console.log('RESPONSE: ', response)
     if (response.code === 200) {
       Swagger.validateModel('RunMetas', response.body)
     } else {
       Swagger.validateModel('GenericResponse', response)
     }
     res.send(response)
-  });
+  })
 })
 
 /**
@@ -68,16 +68,16 @@ router.get('/', (req, res, next) => {
  *           $ref: '#/definitions/GenericResponse'
  */
 router.get('/:id', (req, res, next) => {
-  console.log("inside run meta get run by id/", req.params)
+  console.log('inside run meta get run by id/', req.params)
   dao.getRunById(req.params.id).then(response => {
-    console.log("RESPONSE: ", response);
+    console.log('RESPONSE: ', response)
     if (response.code === 200) {
       Swagger.validateModel('RunMetas', response.body)
     } else {
       Swagger.validateModel('GenericResponse', response)
     }
     res.send(response)
-  });
+  })
 })
 
 /**

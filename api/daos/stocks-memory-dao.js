@@ -1,15 +1,15 @@
 import Model from '../models/stock.model'
-var mysql = require("mysql");
+var mysql = require('mysql')
 
 export default class StocksMemoryDAO {
   constructor () {
-  this.connection = mysql.createConnection({
-  host     : '192.168.33.103',
-  user     : 'capillary',
-  password : '123',
-  database : 'validation'
-});
-}
+    this.connection = mysql.createConnection({
+      host: '192.168.33.103',
+      user: 'capillary',
+      password: '123',
+      database: 'validation'
+    })
+  }
 
   createStock (id, name, currentPrice, lastUpdate) {
     this.data.set(id, new Model(id, name, currentPrice, lastUpdate))

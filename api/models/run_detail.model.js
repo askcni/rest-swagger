@@ -28,7 +28,7 @@
  *       test_case_id: tc001
  *       test_case_description: im a description
  *       status: FAILED
- *       logs: Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+ *       logs: Sed ut perspiciatis unde omnis iste natus error sit voluptatem
  *       added_on: 2018-01-01
  *   RunDetails:
  *     type: array

@@ -28,7 +28,7 @@ const router = express.Router()
  *           $ref: '#/definitions/RunDetails'
  */
 router.get('/:id', (req, res, next) => {
-  console.log('GET /rundetails/:id ', req.params.id);
+  console.log('GET /rundetails/:id ', req.params.id)
   const response = dao.retrieve(parseInt(req.params.id, 10))
   Swagger.validateModel('RunDetail', response)
   res.send(response)
@@ -58,7 +58,7 @@ router.get('/:id', (req, res, next) => {
  *           $ref: '#/definitions/GenericResponse'
  */
 router.post('/', (req, res, next) => {
-  console.log('POST /rundetails: ', req.body);
+  console.log('POST /rundetails: ', req.body)
   Swagger.validateModel('RunDetail', req.body)
   const response = dao.create(req.body)
   Swagger.validateModel('GenericResponse', response)
@@ -91,7 +91,7 @@ router.post('/', (req, res, next) => {
  *           $ref: '#/definitions/RunDetailScreenshot'
  */
 router.get('/screenshot/:run_id/:tc_id', (req, res, next) => {
-  console.log('GET /screenshot/:run_id/:tc_id ', req.params.run_id, req.params.tc_id);
+  console.log('GET /screenshot/:run_id/:tc_id ', req.params.run_id, req.params.tc_id)
   Swagger.validateModel('RunDetailScreenshot', req.body)
   const response = dao.create(req.body)
   Swagger.validateModel('RunDetailScreenshot', response)

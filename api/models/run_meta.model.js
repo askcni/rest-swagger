@@ -56,7 +56,7 @@
  *           $ref: '#/definitions/RunMeta'
  */
 export default class RunMeta {
-    constructor (team, product, features, state, cluster, total_count, passed, failed, skipped, added_on) {
+  constructor (team, product, features, state, cluster, total_count, passed, failed, skipped, added_on) {
     this.team = team
     this.product = product
     this.features = features
