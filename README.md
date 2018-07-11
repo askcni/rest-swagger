@@ -1,3 +1,5 @@
+
+# rest-swagger
 About
 =====
 
@@ -31,3 +33,4 @@ REST API Endpoints
 * *GET* http://localhost:3000/api/stocks/1
 * *POST* http://localhost:3000/api/stocks
 * *PUT* http://localhost:3000/api/stocks/1
+=======
