@@ -1,9 +1,8 @@
-import Model from '../models/run_meta.model'
 import Generic from '../models/generic_response.model'
+import RunMeta from '../models/run_meta.model'
 import * as ResponseHelper from '../util/responseHelper'
 
 var pool = require('../util/database')
-var mysql = require('mysql')
 
 export default class RunMetaDAO {
   constructor () {
@@ -25,18 +24,22 @@ export default class RunMetaDAO {
     }
   }
 
-  async getRunById (run_id) {
+  async getRunById (runId) {
     console.log('inside getRunById')
     let query = 'SELECT * FROM `run_meta` where `run_id` = ?'
-    let rows = []
     try {
-      var result = await pool.query(query, [run_id])
-      result.forEach(function (model) {
-        rows.push(ResponseHelper.buildModelObject(model))
-      })
-      return ResponseHelper.buildSuccessResponse(rows)
+      var result = await pool.query(query, [runId])
+      console.log("response is: ", result)
+      if (result.length)
+      return ResponseHelper.buildSuccessResponse(ResponseHelper.buildModelObject(result[0]))
+      else
+        return ResponseHelper.buildSuccessResponse(new RunMeta)
     } catch (err) {
       return new Generic('Error', 500, err)
     }
+  }
+
+  async addRun (request) {
+    console.log('inside addRun')
   }
 }

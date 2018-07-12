@@ -28,7 +28,7 @@
  *       cluster:
  *         type: string
  *         enum: [NIGHTLY,STAGING,IN,SG,EU,CN]
- *       added_on:
+ *       addedOn:
  *         type: string
  *         format: date
  *     example:
@@ -38,16 +38,16 @@
  *       features: [feat1,feat2]
  *       state: QUEUED
  *       cluster: NIGHTLY
- *       added_on: 2018-01-1
+ *       addedOn: 2018-01-1
  */
 export default class RunMetaResponse {
-  constructor (id, team, product, features, state, cluster, added_on) {
+  constructor (id, team, product, features, state, cluster, addedOn) {
     this.id = id
     this.team = team
     this.product = product
     this.features = features
     this.state = state
     this.cluster = cluster
-    this.added_on = added_on
+    this.addedOn = addedOn
   }
 }

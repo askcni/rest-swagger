@@ -4,26 +4,26 @@
  *   RunDetailScreenshot:
  *     type: object
  *     required:
- *       - run_id
- *       - tc_id
+ *       - runId
+ *       - tcId
  *       - screenshot
  *     properties:
- *       run_id:
+ *       runId:
  *         type: string
- *       tc_id:
+ *       tcId:
  *         type: string
  *       screenshot:
  *         type: string
  *         format: byte
  *     example:
- *       run_id: 10
- *       tc_id: tc001
+ *       runId: 10
+ *       tcId: tc001
  *       screenshot: Sed ut perspiciatis unde omnis iste natus error sit
  */
 export default class RunDetailScreenshot {
-  constructor (run_id, test_case_id, screenshot) {
-    this.run_id = run_id
-    this.test_case_id = test_case_id
+  constructor (runId, testCaseId, screenshot) {
+    this.runId = runId
+    this.testCaseId = testCaseId
     this.screenshot = screenshot
   }
 }

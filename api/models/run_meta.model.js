@@ -9,7 +9,7 @@
  *       - features
  *       - state
  *       - cluster
- *       - added_on
+ *       - addedOn
  *     properties:
  *       team:
  *         type: string
@@ -34,7 +34,7 @@
  *       features: [feat1,feat2]
  *       state: QUEUED
  *       cluster: NIGHTLY
- *       added_on: 2018-01-1
+ *       addedOn: 2018-01-1
  *   RunMetas:
  *     type: array
  *     items:
@@ -56,16 +56,16 @@
  *           $ref: '#/definitions/RunMeta'
  */
 export default class RunMeta {
-  constructor (team, product, features, state, cluster, total_count, passed, failed, skipped, added_on) {
+  constructor (team, product, features, state, cluster, totalCount, passed, failed, skipped, addedOn) {
     this.team = team
     this.product = product
     this.features = features
     this.state = state
     this.cluster = cluster
-    this.total_count = total_count
+    this.totalCount = totalCount
     this.passed = passed
     this.failed = failed
     this.skipped = skipped
-    this.added_on = added_on
+    this.addedOn = addedOn
   }
 }

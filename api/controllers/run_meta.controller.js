@@ -61,7 +61,7 @@ router.get('/', (req, res, next) => {
  *       200:
  *         description: run
  *         schema:
- *           $ref: '#/definitions/RunMetas'
+ *           $ref: '#/definitions/RunMeta'
  *       500:
  *         description: run
  *         schema:
@@ -72,7 +72,7 @@ router.get('/:id', (req, res, next) => {
   dao.getRunById(req.params.id).then(response => {
     console.log('RESPONSE: ', response)
     if (response.code === 200) {
-      Swagger.validateModel('RunMetas', response.body)
+      Swagger.validateModel('RunMeta', response.body)
     } else {
       Swagger.validateModel('GenericResponse', response)
     }
